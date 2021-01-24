@@ -1,16 +1,27 @@
 package com.uki.ssi;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.ArrayList;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
+    private int count = -1;
+
     FragmentHome fragmentItem1;
     FragmentInterest fragmentItem2;
     FragmentGraph fragmentItem3;
@@ -46,10 +57,11 @@ public class MainActivity extends AppCompatActivity {
         fragmentItem1 = new FragmentHome();
         fragmentItem2 = new FragmentInterest();
         fragmentItem3 = new FragmentGraph();
-        //
+
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragmentItem1).commit();
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
+
 }
