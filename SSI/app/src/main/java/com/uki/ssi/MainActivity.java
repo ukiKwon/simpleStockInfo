@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentItem1 = new FragmentHome();
         fragmentItem2 = new FragmentInterest();
         fragmentItem3 = new FragmentGraph();
-
+        //init
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragmentItem1).commit();
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
