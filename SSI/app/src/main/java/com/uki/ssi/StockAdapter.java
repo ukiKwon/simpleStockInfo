@@ -1,5 +1,6 @@
 package com.uki.ssi;
 
+import android.content.res.Resources;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -58,7 +59,22 @@ public class StockAdapter extends RecyclerView.Adapter<StockAdapter.StockViewHol
         viewHolder.img1.setImageDrawable(item.getImg1());
         viewHolder.img2.setImageDrawable(item.getImg2());
         viewHolder.img3.setImageDrawable(item.getImg3());
+        //
+//        if (position + 1 == getItemCount()) {
+//            // set bottom margin to 72dp.
+//            setBottomMargin(viewHolder.itemView, (int) (72 * Resources.getSystem().getDisplayMetrics().density));
+//        } else {
+//            // reset bottom margin back to zero. (your value may be different)
+//            setBottomMargin(viewHolder.itemView, 0);
+//        }
     }
+//    public static void setBottomMargin(View view, int bottomMargin) {
+//        if (view.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
+//            ViewGroup.MarginLayoutParams params = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
+//            params.setMargins(params.leftMargin, params.topMargin, params.rightMargin, bottomMargin);
+//            view.requestLayout();
+//        }
+//    }
     @Override
     public int getItemCount() {
         return (null != mList? mList.size() : 0 );

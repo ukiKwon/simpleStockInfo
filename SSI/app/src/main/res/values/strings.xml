@@ -3,4 +3,5 @@
     <string name="title_home">전체</string>
     <string name="title_dashboard">관심</string>
     <string name="title_graph">그래프</string>
+    <string name="fab_content_desc">아이템 추가</string>
 </resources>
