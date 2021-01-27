@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
+    android:id="@+id/history_fragment_container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF3F3F4">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,22 +14,22 @@
 
         <TextView
             android:id="@+id/rank"
-            android:text="순위"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginLeft="20dp"
-            android:layout_gravity="center"/>
+            android:text="순위" />
 
         <TextView
             android:id="@+id/stock_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
+            android:layout_weight="1"
             android:text="종목"
-            android:textAlignment="center"
-            android:layout_gravity="center"
-            android:layout_weight="1"/>
+            android:textAlignment="center" />
 
         <LinearLayout
             android:id="@+id/layout_score"
@@ -40,27 +41,27 @@
 
             <TextView
                 android:id="@+id/growth"
-                android:text="성장성"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginRight="5dp"/>
+                android:layout_marginRight="12dp"
+                android:text="성장성" />
 
             <TextView
                 android:id="@+id/stability"
-                android:text="건정성"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginRight="5dp" />
+                android:layout_marginRight="12dp"
+                android:text="건정성" />
 
             <TextView
                 android:id="@+id/intest"
-                android:text="수익성"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginRight="5dp" />
+                android:layout_marginRight="5dp"
+                android:text="수익성" />
 
         </LinearLayout>
 
@@ -70,17 +71,15 @@
         android:id="@+id/recyclerview_stock"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipToPadding="false"
-        android:paddingBottom="30dp"
-        android:scrollbars="vertical"/>
+        android:layout_marginTop="40dp"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_action_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
-        android:contentDescription="@string/fab_content_desc"
-        app:srcCompat="@drawable/ic_add_black_24dp"
-        app:fabSize="auto"/>
-</LinearLayout>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30dp"
+        app:fabSize="normal"
+        android:id="@+id/floating_action_button"
+        app:srcCompat="@drawable/ic_add_black_24dp" />
+</RelativeLayout>

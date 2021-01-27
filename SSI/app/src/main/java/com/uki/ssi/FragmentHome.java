@@ -62,7 +62,7 @@ public class FragmentHome extends Fragment {
 
         //mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));//아이템을 세로로 배정하기 위해, default가 vertical임
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
-//        ((LinearLayoutManager) layoutManager).setStackFromEnd(true);
+        ((LinearLayoutManager) layoutManager).setStackFromEnd(true);
         ((LinearLayoutManager) layoutManager).setReverseLayout(true);
 
         mRecyclerView.setLayoutManager(layoutManager);

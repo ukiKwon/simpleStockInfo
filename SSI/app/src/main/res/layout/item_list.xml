@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginLeft="20dp"
-        android:text="1" />
+        android:text="1"
+        android:textSize="@dimen/txt_item_size"/>
     <!-- 구성2. 이름 -->
     <TextView
         android:id="@+id/item_name"
@@ -20,7 +21,8 @@
         android:layout_gravity="center"
         android:layout_weight="3"
         android:text="샘플"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textSize="@dimen/txt_item_size"/>
     <!-- 구성3. 점수 3가지 -->
     <LinearLayout
         android:layout_width="wrap_content"
@@ -31,24 +33,24 @@
 
         <ImageView
             android:id="@+id/item_growth"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/img_state_width"
+            android:layout_height="@dimen/img_state_height"
             android:layout_gravity="center"
             android:layout_marginRight="5dp"
             android:src="@drawable/ic_sentiment_very_satisfied_black_24dp" />
 
         <ImageView
             android:id="@+id/item_stability"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/img_state_width"
+            android:layout_height="@dimen/img_state_height"
             android:layout_gravity="center"
             android:layout_marginRight="5dp"
             android:src="@drawable/ic_sentiment_dissatisfied_black_24dp" />
 
         <ImageView
             android:id="@+id/item_interest"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/img_state_width"
+            android:layout_height="@dimen/img_state_height"
             android:layout_gravity="center"
             android:src="@drawable/ic_sentiment_satisfied_black_24dp" />
     </LinearLayout>
